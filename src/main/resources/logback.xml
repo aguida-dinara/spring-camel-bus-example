@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{65} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO"/>
+
+	<!-- Disable printing CONDITIONS EVALUATION REPORT for autoconfiguration -->
+	<logger name="org.springframework.boot.autoconfigure" level="ERROR" />
+	<logger name="org.springframework.boot" level="DEBUG"/>
+	<logger name="com.microsoft.azure" level="DEBUG"/>
+	<logger name="org.apache.camel.component.azure" level="DEBUG"/>
+	<logger name="org.apache.camel" level="DEBUG"/>
+	<logger name="org.apache.qpid.jms" level="DEBUG" />
+	<logger name="com.azure.messaging.servicebus" level="DEBUG"/>
+</configuration>

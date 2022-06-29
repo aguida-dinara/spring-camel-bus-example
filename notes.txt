@@ -1,0 +1,3 @@
+https://github.com/jamie3/camel-azure-servicebus
+
+https://stackoverflow.com/questions/50259714/accessing-azure-service-bus-with-apache-camel
